@@ -1,0 +1,39 @@
+{
+  "name": "Promaster",
+  "children": [
+    {"name": "Location",
+      "children": [
+      {"name": "Year Build"},
+      {"name": "Survey Date"},
+      {"name": "Category"},
+      {"name": "Type"}
+      ]},
+    {"name": "Survey",
+      "children": [
+      {"name": "DHS Elements",
+        "children": [
+        {"name": "Kitchen"},
+        {"name": "Bathroom"},
+        {"name": "Door"},
+        {"name": "Window"},
+        {"name": "Roof"}
+        ]
+      },
+      {"name": "Non DHS"},
+      {"name": "H&S Elements"}
+      ]},
+    {"name": "Asset",
+      "children": [
+      {"name": "Boiler"},
+      {"name": "Electrical",
+        "children": [
+        {"name": "EICR"},
+        {"name": "PAT"}
+        ]},
+      {"name": "Fire"},
+      {"name": "Lifts"},
+      {"name": "Water"}
+      ]}
+  ]
+}
+

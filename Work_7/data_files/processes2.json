@@ -1,0 +1,56 @@
+{
+  "nodes":[
+{"name":"Promaster","group":1},
+{"name":"Property Extract","group":2},
+{"name":"Programme Creation","group":3},
+{"name":"MHP Info Changes","group":3},
+{"name":"Contractor Database","group":1},
+{"name":"Contractor Works","group":4},
+{"name":"LGSRs Over FTP","group":2},
+{"name":"Heating Tas","group":3},
+{"name":"Checking and Processing","group":3},
+{"name":"Data Team","group":5},
+{"name":"Auditors","group":4},
+{"name":"K.P.I's","group":2},
+{"name":"Contractor Management","group":2},
+{"name":"Forecasting Figures","group":2},
+{"name":"Board and managers","group":3},
+
+{"name":"Costing Information","group":2},
+{"name":"Element Programme Creation","group":5},
+{"name":"Props Within Programme","group":2},
+{"name":"Planned","group":3}
+
+
+  ],
+  "links":[
+{"source":0,"target":1,"value":5},
+{"source":1,"target":2,"value":5},
+{"source":0,"target":2,"value":5},
+{"source":3,"target":2,"value":5},
+{"source":3,"target":4,"value":5},
+{"source":2,"target":4,"value":5},
+{"source":4,"target":5,"value":5},
+{"source":4,"target":6,"value":5},
+{"source":6,"target":7,"value":5},
+{"source":7,"target":8,"value":5},
+{"source":8,"target":0,"value":5},
+{"source":9,"target":1,"value":5},
+{"source":9,"target":10,"value":5},
+{"source":9,"target":11,"value":5},
+{"source":9,"target":12,"value":5},
+{"source":9,"target":13,"value":5},
+{"source":13,"target":14,"value":5},
+{"source":11,"target":14,"value":5},
+{"source":11,"target":14,"value":5},
+{"source":12,"target":5,"value":5},
+
+{"source":9,"target":15,"value":5},
+{"source":15,"target":14,"value":5},
+{"source":1,"target":16,"value":5},
+{"source":16,"target":17,"value":5},
+{"source":17,"target":18,"value":5}
+
+
+  ]
+}

@@ -1,0 +1,48 @@
+<html style="overflow: hidden;">
+	<head>
+    	<title>D3 Works</title>
+
+    	<script src = "http://d3js.org/d3.v3.min.js"></script>
+		<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<link rel="stylesheet" href="sheet_styles.css"></link>
+		
+		<!--CORE PAGE ITEMS-->
+		<script type="text/javascript" src="js_files/main.js"></script>
+		<script type="text/javascript" src="js_files/load_json.js"></script>
+		<script type="text/javascript" src="js_files/load_csv.js"></script>
+		<script type="text/javascript" src="js_files/d3_canvas.js"></script>
+
+		<!--ADDITIONAL PAGE ITEMS-->
+		<script type="text/javascript" src="js_additions/force_directed_graph.js"></script>
+
+	</head>
+
+	<body>
+		<h1>D3 Tests</h1>
+
+		<b>JSON File</b> <input type="file" id="jsonfile"> <br>	
+		<button id="submitjson" type="button">read.json</button>
+		<!--<div id="jsonimporthint"></div>-->
+
+		<br>
+		<br>
+
+		<b>CSV File</b> <input type="file" id="csvfile"> <br>	
+		<button id="submitcsv" type="button">read.csv</button>
+		<!--<div id="csvimporthint"></div>-->
+
+		<br>
+		<br>
+		<button id="run_forcegraph" type="button">run force graph</button>
+
+	</body>
+
+	<!--
+		
+		
+		<script type="text/javascript" src="js_files/graph_tests.js"></script>
+		<script type="text/javascript" src="js_files/cluster_dendrogram.js"></script>
+		<script type="text/javascript" src="js_files/drag_and_drop_tree.js"></script>		
+	-->
+
+</html>
