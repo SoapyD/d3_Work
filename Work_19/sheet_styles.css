@@ -1,0 +1,63 @@
+
+#wrapper {
+    width: 1200px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+#test {
+    float:left; 
+}
+
+#products { 
+    font: 12px/1.3 sans-serif;
+    float:left; 
+    width: 200px; 
+    margin-right: 2em; 
+}
+
+.sortable {
+    width: 900px;
+    font-size: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portlet {
+    font: 12px/1.3 sans-serif;
+    margin: 3px;
+    padding: 1px;
+    display: inline-block;
+    vertical-align: top;
+    height: 200px;
+}
+
+.portlet.span-1 { width: 200px; }
+.portlet.span-2 { width: 400px; }
+.portlet.span-3 { width: 600px; }
+
+.portlet-header {
+    margin: 3px;
+    padding: 1px 0 2px 3px;
+}
+
+.portlet-header .ui-icon {
+    float: right;
+}
+
+.portlet-content {
+    padding: 4px;
+}
+
+.portlet-minimized {
+    height: auto;
+}
+
+.portlet-minimized .portlet-content {
+    display: none;
+}
+
+.ui-sortable-placeholder {
+    border: 1px dotted black;
+    visibility: visible !important;
+}
