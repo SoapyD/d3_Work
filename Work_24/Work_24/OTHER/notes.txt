@@ -1,0 +1,31 @@
+
+2014-08-28
+----------------------
+
+MAIN6
+-Added "load amount" to circles being sent from processes. It's the only way of ensuring we know exactly how much charge each of those circles are carrying and passing on.
+-Created a "type" value within the text field on the process numbers box as I can multiples types of text within the same group. Should mean that I can differentiate them without this gettings too crazy.
+
+
+
+2014-08-27
+----------------------
+
+MAIN5
+-Stopped the enlarging for the momement as it's not the main focus
+-Now have a "load" value that get's ticked through as the process runs
+-'load' valus is altered using an 'output' value representing how much data can be sent at one time
+-DONE -Need to make the output check that that much load can be passed. Create a "packet" value that will say how much data is actually being sent over
+
+
+
+2014-08-26
+----------------------
+
+MAIN2
+-Created a method that send off nodes (yellow circles) after each process position has pumped it out. 
+-The next process isn't triffered until it receives information
+
+MAIN3
+-Changed the method so receiving data nodes increases the size of the process blocks
+

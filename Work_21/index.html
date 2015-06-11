@@ -1,0 +1,72 @@
+<html style="overflow: hidden;">
+	<head>
+    	<title>D3 Works</title>
+
+    	<script src = "http://d3js.org/d3.v3.min.js"></script>
+		<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/start/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style_sheets/sheet_styles.css"></link>
+		<link rel="stylesheet" type="text/css" href="style_sheets/d3_styles.css"></link>	
+		<!--CORE PAGE ITEMS-->
+
+		<script type="text/javascript" src="js_files/Jquery_Tests/jquery_test3.js"></script>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main3.js"></script>
+		<!--ADDITIONAL PAGE ITEMS-->
+
+	</head>
+
+	<body>
+
+		<h1 class="Title">HTML Tests</h1>
+
+		<div id="wrapper">
+
+		<div id="products">
+			<h1 class="ui-widget-header">Products</h1>
+		  	<div id="catalog">
+		    	<h2><a href="#">Table #1</a></h2>
+		    	<div>
+		    		<ul>
+		        		<li id="li_1">Item #1</li>
+		        		<li id="li_2">Item #2</li>
+		        		<li id="li_3">Item #3</li>
+		      		</ul>
+		    	</div>
+		    	<h2><a href="#">Table #2</a></h2>
+		    	<div>
+		    		<ul>
+		        		<li id="li_4">Item #4</li>
+		        		<li id="li_5">Item #5</li>
+		      		</ul>
+		    	</div>
+
+			</div>
+		</div>
+
+		<div id="test">
+			<script>var id_num=0;</script>
+			<div class="sortable">
+				<script>$('.sortable').sortable();</script>
+			</div>
+		</div>
+
+		</div>
+
+		<div id="change_this">Test_Box</div>
+		<script>
+			variable_name = "content_id"+id_num
+			document.getElementById("change_this").id=variable_name;
+			Print_Test(variable_name);
+			id_num+=1;
+		</script>
+
+	</body>
+
+	<!--
+		<link rel="stylesheet" href="jquery-ui.css"></link>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="js_files/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	-->
+
+</html>

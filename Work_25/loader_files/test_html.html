@@ -1,0 +1,19 @@
+<html style="overflow: hidden;">
+
+	<head>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main (area graph).js"></script>
+	</head>
+		<div id="test1">
+			<div class="portlet-header" id="change_this">Feeds</div>
+			<div class="portlet-content" id="content_id"></div>
+			<script>
+				variable_name = "run_this"+id_num
+				document.getElementById("change_this").id=variable_name;
+				Query_Test4(variable_name);
+				variable_name = "content_id"+id_num
+				document.getElementById("content_id").id=variable_name;
+				Print_Area(variable_name);
+				id_num+=1;
+			</script>
+		</div>
+</html>
