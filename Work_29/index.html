@@ -1,0 +1,94 @@
+<html style="overflow: hidden;">
+	<head>
+    	<title>D3 Works</title>
+
+    	<script src = "http://d3js.org/d3.v3.min.js"></script>
+		<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/start/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style_sheets/sheet_styles.css"></link>
+		<link rel="stylesheet" type="text/css" href="style_sheets/d3_styles.css"></link>	
+		<!--CORE PAGE ITEMS-->
+
+		<script type="text/javascript" src="js_files/Jquery_Tests/jquery_test3.js"></script>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main (area graph).js"></script>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main3 (bar chart).js"></script>
+		<!--ADDITIONAL PAGE ITEMS-->
+
+  <script>
+  $(function() {
+    $( ".column" ).sortable({
+      connectWith: ".column",
+      handle: ".portlet-header",
+      cancel: ".portlet-toggle",
+      placeholder: "portlet-placeholder ui-corner-all"
+    });
+ 
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+ 
+    $( ".portlet-toggle" ).click(function() {
+      var icon = $( this );
+      icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+      icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+  });
+  </script>
+
+	</head>
+
+	<body>
+
+		<h1 class="Title">HTML Tests</h1>
+
+		<div id="wrapper">
+
+		<div id="products">
+			<h1 class="ui-widget-header">Products</h1>
+		  	<div id="catalog">
+		    	<h2><a href="#">Table #1</a></h2>
+		    	<div>
+		    		<ul>
+		        		<li id="li_1">Area Graph</li>
+		        		<li id="li_2">Bar Chart</li>
+		      		</ul>
+		    	</div>
+		    	<h2><a href="#">Table #2</a></h2>
+		    	<div>
+		    		<ul>
+		        		<li id="li_4">Item #4</li>
+		        		<li id="li_5">Item #5</li>
+		      		</ul>
+		    	</div>
+
+			</div>
+		</div>
+
+		<div id="test">
+			<script>var id_num=0;</script>
+			<div class="sortable">
+				<div class="column" id = "col_1">
+				</div>
+				<div class="column">	
+				</div>
+				<div class="column">
+				</div>
+			</div>
+			<script>
+				$('.sortable').sortable();
+			</script>
+
+		</div>
+
+		</div>
+
+	</body>
+
+	<!--
+
+	-->
+
+</html>
