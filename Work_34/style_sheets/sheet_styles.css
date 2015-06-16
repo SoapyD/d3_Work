@@ -1,0 +1,122 @@
+body {
+  height: 1000px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.title {
+    font: 30px;
+    text-align: center;
+    text-decoration: underline;  
+}
+
+#wrapper {
+    width: 1300px;
+    height: 550;
+    border: 2px solid black;
+}
+
+#test {
+    float:left; 
+}
+
+#products { 
+    font: 12px/1.3 sans-serif;
+    width: 200px; 
+    margin-right: 2em;
+    float: left;
+}
+
+#filters { 
+    font: 12px/1.3 sans-serif;
+    width: 200px; 
+    margin-left: 2em;
+    float: right;
+}
+
+.column {
+    width: 790px;
+    padding-bottom: 100px;
+    float: left;
+}
+
+.sortable {
+    width: 800px;
+    font-size: 0;
+    padding: 10px;
+    border: 2px solid black;
+    float: left;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.portlet {
+    font: 12px/1.3 sans-serif;
+    margin: 3px;
+    padding: 1px;
+    display: inline-block;
+    height: 300px;
+    vertical-align: top;
+}
+
+.portlet.span-1 { width: 382px; }
+.portlet.span-2 { width: 782px;}
+.portlet.span-3 { width: 600px; }
+
+.portlet-header {
+    margin: 3px;
+    padding: 1px 0 2px 3px;
+    height: 30px;
+}
+
+.portlet-header .ui-icon {
+    float: right;
+}
+
+.portlet-content {
+    padding: 4px;
+}
+
+.portlet-minimized {
+    height: auto;
+}
+
+.portlet-minimized .portlet-content {
+    display: none;
+}
+
+.ui-sortable-placeholder {
+    border: 1px dotted black;
+    visibility: visible !important;
+}
+
+#tall {
+    width: 200px;
+    height: 300px;
+}
+
+
+/* THESE ARE NEEDED FOR THE FILTER SELECTION */
+#feedback { 
+    font-size: 12px; 
+}
+.selectable .ui-selecting { 
+    background: #FECA40;
+}
+.selectable .ui-selected { 
+    background: #F39814; color: white; 
+}
+.selectable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 80%;
+    height: 100; 
+}
+.selectable li { 
+    margin: 3px; 
+    padding: 0.4em; 
+    font-size: 12px; 
+    height: 18px; 
+}

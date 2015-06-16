@@ -1,0 +1,74 @@
+window.onload = function WindowLoad(event) {
+	App_Info()
+}
+
+function App_Info()
+{
+	this.canvas;
+	this.jsonData;
+}
+
+
+function Print_Bar(loaded_item){
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////DATA
+	////////////////////////////////////////////////////////////////////////////////////////////
+	var  jsonData = Call_Data()
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////FRAME
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	margin = {top: 10, right: 10, bottom: 15, left: 20},
+    w = 300 - margin.left - margin.right,
+    h = 100 - margin.top - margin.bottom;
+
+	//APPLY SCALING, BOUNDS AND AN AXIS TO THE GRAPH
+
+	widthScale = d3.scale.linear()
+		.domain([0, d3.max(jsonData, function(d) { return d.ID; }) + 30])
+   		.range([0, w]);
+
+	heightScale = d3.scale.linear()
+		.domain([0, d3.max(jsonData, function(d) { return d.total; })])
+    	.range([0, h]);
+
+	App_Info.canvas = d3.select("#" + loaded_item);
+	var svg = App_Info.canvas.append("svg:svg")
+	    	.attr("width", w + margin.left + margin.right)
+	    	.attr("height", h + margin.top + margin.bottom)
+	    	.style("border","1px solid black")
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////LINE DATA
+	////////////////////////////////////////////////////////////////////////////////////////////
+
+	Set_BarGraph(jsonData, svg)
+}
+
+
+function Set_BarGraph(data, svg){
+
+	var xAxis = d3.svg.axis()
+	    .scale(widthScale)
+	    .ticks(12)
+	    .orient("bottom");
+
+  	svg.append("g")
+      	.attr("class", "x axis")
+      	.attr("transform", "translate(0," + h + ")")
+      	.call(xAxis);
+
+	svg.selectAll("div")
+		.data(data)
+  		.enter().append("rect")
+  		//.filter(function(d) { return d.ID < 100 })
+  		//.filter(function(d) { return d.total < 120 }) 
+  			.attr("class", "bar")
+			.attr("x", function(d) { return widthScale(d.ID) - 10; })
+			.attr("y", function(d) { return h - heightScale(d.total); })
+			.attr("height", function(d) { return heightScale(d.total); })
+			.attr("width", 20)
+
+}	

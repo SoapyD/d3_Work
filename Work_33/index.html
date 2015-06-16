@@ -1,0 +1,154 @@
+<html style="overflow: hidden;">
+	<head>
+    	<title>D3 Works</title>
+
+    	<script src = "http://d3js.org/d3.v3.min.js"></script>
+		<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/start/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style_sheets/sheet_styles.css"></link>
+		<link rel="stylesheet" type="text/css" href="style_sheets/d3_styles.css"></link>	
+		<!--CORE PAGE ITEMS-->
+
+		<script type="text/javascript" src="js_files/Jquery_Tests/jquery_test3.js"></script>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main (area graph).js"></script>
+		<script type="text/javascript" src="js_files/D3_Tests/d3_main3 (bar chart)3.js"></script>
+		<script type="text/javascript" src="json_data.js"></script>
+		<!--ADDITIONAL PAGE ITEMS-->
+
+  <script>
+  //this section of code is needed for the portlet section
+  $(function() {
+    $( ".column" ).sortable({
+      connectWith: ".column",
+      handle: ".portlet-header",
+      cancel: ".portlet-toggle",
+      placeholder: "portlet-placeholder ui-corner-all"
+    });
+ 
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+ 
+    $( ".portlet-toggle" ).click(function() {
+      var icon = $( this );
+      icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+      icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+  });
+
+  //this section of code is needed for the selectable filters section
+  $(function() {
+    $( ".selectable" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( ".selectable li" ).index( this );
+          result.append( " #" + ( index + 1 ) );
+        });
+      }
+    });
+  });
+
+  </script>
+
+	</head>
+
+	<body>
+
+		<h1 class="Title">Dynamic Dashboard</h1>
+
+		<div id="wrapper">
+
+			<div id="products">
+				<h1 class="ui-widget-header">Products</h1>
+			  	<div id="catalog">
+			    	<h2><a href="#">Table #1</a></h2>
+			    	<div>
+			    		<ul>
+			        		<li id="li_1">Area Graph</li>
+			        		<li id="li_2">Bar Chart</li>
+			      		</ul>
+			    	</div>
+			    	<h2><a href="#">Table #2</a></h2>
+			    	<div>
+			    		<ul>
+			        		<li id="li_4">Item #4</li>
+			        		<li id="li_5">Item #5</li>
+			      		</ul>
+			    	</div>
+
+				</div>
+			</div>
+
+			<div id="test">
+				<script>var id_num=0;</script>
+				<div class="sortable">
+					<div class="column" id = "col_1">
+					</div>
+				</div>
+				<script>
+					$('.sortable').sortable();
+					$( ".sortable" ).disableSelection
+					$( ".column" ).disableSelection //stop people from being able to drag the column around
+				</script>
+
+			</div>
+
+			<div id="filters">
+				<h1 class="ui-widget-header">Filters</h1>
+			  	<div id="catalog2">
+			    	<h2><a href="#">Region</a></h2>
+			    	<div>
+						<ol class="selectable">
+							<li class="ui-widget-content">Nottingham</li>
+							<li class="ui-widget-content">Derby</li>
+							<li class="ui-widget-content">London</li>
+						</ol>
+			    	</div>
+			    	<h2><a href="#">Table #2</a></h2>
+			    	<div>
+						<ol class="selectable">
+							<li class="ui-widget-content">Item 7</li>
+							<li class="ui-widget-content">Item 8</li>
+							<li class="ui-widget-content">Item 9</li>
+							<li class="ui-widget-content">Item 10</li>
+							<li class="ui-widget-content">Item 11</li>
+							<li class="ui-widget-content">Item 12</li>
+						</ol>
+			    	</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<p id="feedback">
+			<span>You've selected:</span> <span id="select-result">none</span>.
+		</p>
+
+		<div id="change_this">Test_Box</div>
+		<script>
+			variable_name = "content_id"+id_num
+			document.getElementById("change_this").id=variable_name;
+			Print_Bar(variable_name);
+			//Print_Area(variable_name);
+			id_num+=1;
+		</script>
+
+	</body>
+
+	<!--
+		<div id="change_this">Test_Box</div>
+		<script>
+			variable_name = "content_id"+id_num
+			document.getElementById("change_this").id=variable_name;
+			Print_Bar(variable_name);
+			//Print_Area(variable_name);
+			id_num+=1;
+		</script>
+	-->
+
+</html>
